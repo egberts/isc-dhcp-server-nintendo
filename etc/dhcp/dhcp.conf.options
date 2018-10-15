@@ -1,0 +1,12 @@
+
+
+if (option host-name ~= "Nintendo 3DS") {
+   ddns-hostname = concat ("Nintendo3DS", binary-to-ascii (16, 8, "x", substring (hardware, 1, 6)));
+   log(concat("Changing hostname1: ", option host-name, " into ", ddns-hostname));
+}
+
+
+if (option host-name ~= "(Nintendo 3DS)") {
+   ddns-hostname = concat ("Nintendo3DS", binary-to-ascii (16, 8, "x", substring (hardware, 1, 6)));
+   log(concat("Changing hostname2: ", option host-name, " into ", ddns-hostname));
+}
